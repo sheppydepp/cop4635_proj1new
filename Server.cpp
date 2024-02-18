@@ -1,3 +1,10 @@
+/*
+ * Server.cpp
+ *
+ *  Created on: Feb 17, 2024
+ *      Author: Tyre Sheffield, Shep Harper
+ */
+
 #include "Server.hpp"
 
 const char* Server::get_file_extension(const char *file_name) {
