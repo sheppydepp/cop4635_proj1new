@@ -17,7 +17,14 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#define PORT 8080
+using namespace std;
+#define PORT 60004
 #define BUFFER_SIZE 104857600
+
+class Server {
+public:
+
+private:
+};
 
 #endif
