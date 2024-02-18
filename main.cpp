@@ -1,11 +1,9 @@
-//============================================================================
-// Name        : main.cpp
-// Author      : Tyre Sheffield, Shep Harper
-// Version     : 1.0
-// 
-// Description : Starts the Server with index.html and testPresence.html
-//============================================================================
-
+/*
+ * main.cpp
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Tyre Sheffield, Shep Harper
+ */
 
 #include "Server.hpp"
 int main()
