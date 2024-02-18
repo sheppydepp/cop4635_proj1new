@@ -1,3 +1,10 @@
+/*
+ * Server.hpp
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Tyre Sheffield, Shep Harper
+ */
+
 #ifndef SERVER_HPP
 #define SERVER_HPP
 
