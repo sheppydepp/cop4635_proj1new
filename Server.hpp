@@ -39,7 +39,7 @@ public:
                         const char *file_ext, 
                         char *response, 
                         size_t *response_len);
-  void* handle_client(void *arg);
+  static void* handle_client(void *arg);
   void startServer();
 private:
 };
