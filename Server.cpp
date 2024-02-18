@@ -22,7 +22,7 @@ const char* Server::get_mime_type(const char *file_ext) {
     }
 }
 
-bool case_insensitive_compare(const char *s1, const char *s2) {
+bool Server::case_insensitive_compare(const char *s1, const char *s2) {
     while (*s1 && *s2) {
         if (tolower((unsigned char)*s1) != tolower((unsigned char)*s2)) {
             return false;
@@ -33,7 +33,7 @@ bool case_insensitive_compare(const char *s1, const char *s2) {
     return *s1 == *s2;
 }
 
-char *get_file_case_insensitive(const char *file_name) {
+char* Server::get_file_case_insensitive(const char *file_name) {
     DIR *dir = opendir(".");
     if (dir == NULL) {
         perror("opendir");
@@ -53,7 +53,7 @@ char *get_file_case_insensitive(const char *file_name) {
     return found_file_name;
 }
 
-char *url_decode(const char *src) {
+char* Server::url_decode(const char *src) {
     size_t src_len = strlen(src);
     char *decoded = (char*)malloc(src_len + 1);
     size_t decoded_len = 0;
@@ -75,7 +75,7 @@ char *url_decode(const char *src) {
     return decoded;
 }
 
-void build_http_response(const char *file_name, 
+void Server::build_http_response(const char *file_name, 
                         const char *file_ext, 
                         char *response, 
                         size_t *response_len) {
@@ -121,7 +121,7 @@ void build_http_response(const char *file_name,
     close(file_fd);
 }
 
-void *handle_client(void *arg) {
+void* Server::handle_client(void *arg) {
     int client_fd = *((int *)arg);
     char *buffer = (char *)malloc(BUFFER_SIZE * sizeof(char));
 
@@ -162,7 +162,7 @@ void *handle_client(void *arg) {
     return NULL;
 }
 
-int main(int argc, char *argv[]) {
+void Server::startServer() {
     int server_fd;
     struct sockaddr_in server_addr;
 
@@ -213,5 +213,5 @@ int main(int argc, char *argv[]) {
     }
 
     close(server_fd);
-    return 0;
+    return;
 }
