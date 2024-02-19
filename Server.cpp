@@ -199,7 +199,7 @@ void Server::startServer() {
     }
 
     printf("Server listening on port %d\n", PORT);
-    while (1) {
+    while (true) {
         // client info
         struct sockaddr_in client_addr;
         socklen_t client_addr_len = sizeof(client_addr);
@@ -220,5 +220,5 @@ void Server::startServer() {
         // close client socket
         close(client_fd);
     }
-    close(server_fd);
+    
 }
