@@ -24,7 +24,7 @@
 #include <unistd.h>
 
 using namespace std;
-#define PORT 60004
+#define PORT 60007
 #define BUFFER_SIZE 104857600
 
 class Server {
