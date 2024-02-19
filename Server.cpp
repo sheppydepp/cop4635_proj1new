@@ -164,7 +164,7 @@ void* Server::handle_client(int client_fd) {
         regfree(&regex);
     }
     close(client_fd);
-    free(arg);
+    //free(arg);
     free(buffer);
     return NULL;
 }
