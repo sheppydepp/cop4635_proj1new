@@ -213,12 +213,11 @@ void Server::startServer() {
             continue;
         }
 
-        // create a new thread to handle client request
-        pthread_t thread_id;
-        pthread_create(&thread_id, NULL, handle_client, (void *)client_fd);
-        pthread_detach(thread_id);
-    }
+        // handle client request
+        handle_client(client_fd);
 
+        // close client socket
+        close(client_fd);
+    }
     close(server_fd);
-    return;
 }
