@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -g -Wall -pthread
+CXXFLAGS = -std=c++17 -g -Wall
 
 OBJECTS = Server.o
 
