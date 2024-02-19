@@ -38,7 +38,7 @@ public:
                         const char *file_ext, 
                         char *response, 
                         size_t *response_len);
-  static void* handle_client(void *arg);
+  static void* handle_client(int client_fd);
   void startServer();
 private:
 };
