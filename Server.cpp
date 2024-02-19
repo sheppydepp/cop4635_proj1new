@@ -203,10 +203,11 @@ void Server::startServer() {
         // client info
         struct sockaddr_in client_addr;
         socklen_t client_addr_len = sizeof(client_addr);
-        int *client_fd = new int;
+        //int *client_fd = new int;
+        int client_fd;
 
         // accept client connection
-        if ((*client_fd = accept(server_fd, 
+        if ((client_fd = accept(server_fd, 
                                 (struct sockaddr *)&client_addr, 
                                 &client_addr_len)) < 0) {
             perror("accept failed");
