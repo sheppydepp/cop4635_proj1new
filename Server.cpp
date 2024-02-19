@@ -128,8 +128,8 @@ void Server::build_http_response(const char *file_name,
     close(file_fd);
 }
 
-void* Server::handle_client(void *arg) {
-    int client_fd = *((int *)arg);
+void* Server::handle_client(int client_fd) {
+    //int client_fd = *((int *)arg);
     char *buffer = (char *)malloc(BUFFER_SIZE * sizeof(char));
 
     // receive request data from client and store into buffer
